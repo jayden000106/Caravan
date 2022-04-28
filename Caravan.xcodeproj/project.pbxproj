@@ -16,6 +16,7 @@
 		B923899C281A5FFA0012BBEE /* CaravanUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B923899B281A5FFA0012BBEE /* CaravanUITestsLaunchTests.swift */; };
 		B92389AC281A7FB40012BBEE /* CustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92389AB281A7FB40012BBEE /* CustomTabBar.swift */; };
 		B92389AF281A8DB30012BBEE /* TabViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92389AE281A8DB30012BBEE /* TabViewModel.swift */; };
+		B92389B1281AA0FE0012BBEE /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92389B0281AA0FE0012BBEE /* HomeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		B923899B281A5FFA0012BBEE /* CaravanUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaravanUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		B92389AB281A7FB40012BBEE /* CustomTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBar.swift; sourceTree = "<group>"; };
 		B92389AE281A8DB30012BBEE /* TabViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewModel.swift; sourceTree = "<group>"; };
+		B92389B0281AA0FE0012BBEE /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +139,7 @@
 			isa = PBXGroup;
 			children = (
 				B92389AB281A7FB40012BBEE /* CustomTabBar.swift */,
+				B92389B0281AA0FE0012BBEE /* HomeView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -282,6 +285,7 @@
 				B92389AF281A8DB30012BBEE /* TabViewModel.swift in Sources */,
 				B92389AC281A7FB40012BBEE /* CustomTabBar.swift in Sources */,
 				B9238981281A5FF80012BBEE /* ContentView.swift in Sources */,
+				B92389B1281AA0FE0012BBEE /* HomeView.swift in Sources */,
 				B923897F281A5FF80012BBEE /* CaravanApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
