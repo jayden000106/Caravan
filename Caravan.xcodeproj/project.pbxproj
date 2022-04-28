@@ -14,6 +14,8 @@
 		B9238990281A5FFA0012BBEE /* CaravanTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B923898F281A5FFA0012BBEE /* CaravanTests.swift */; };
 		B923899A281A5FFA0012BBEE /* CaravanUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9238999281A5FFA0012BBEE /* CaravanUITests.swift */; };
 		B923899C281A5FFA0012BBEE /* CaravanUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B923899B281A5FFA0012BBEE /* CaravanUITestsLaunchTests.swift */; };
+		B92389AC281A7FB40012BBEE /* CustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92389AB281A7FB40012BBEE /* CustomTabBar.swift */; };
+		B92389AF281A8DB30012BBEE /* TabViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92389AE281A8DB30012BBEE /* TabViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +46,8 @@
 		B9238995281A5FFA0012BBEE /* CaravanUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CaravanUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9238999281A5FFA0012BBEE /* CaravanUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaravanUITests.swift; sourceTree = "<group>"; };
 		B923899B281A5FFA0012BBEE /* CaravanUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaravanUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		B92389AB281A7FB40012BBEE /* CustomTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBar.swift; sourceTree = "<group>"; };
+		B92389AE281A8DB30012BBEE /* TabViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +98,8 @@
 		B923897D281A5FF80012BBEE /* Caravan */ = {
 			isa = PBXGroup;
 			children = (
+				B92389AD281A8D960012BBEE /* ViewModel */,
+				B92389A8281A7F2D0012BBEE /* View */,
 				B923897E281A5FF80012BBEE /* CaravanApp.swift */,
 				B9238980281A5FF80012BBEE /* ContentView.swift */,
 				B9238982281A5FFA0012BBEE /* Assets.xcassets */,
@@ -125,6 +131,22 @@
 				B923899B281A5FFA0012BBEE /* CaravanUITestsLaunchTests.swift */,
 			);
 			path = CaravanUITests;
+			sourceTree = "<group>";
+		};
+		B92389A8281A7F2D0012BBEE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B92389AB281A7FB40012BBEE /* CustomTabBar.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B92389AD281A8D960012BBEE /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				B92389AE281A8DB30012BBEE /* TabViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,6 +279,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B92389AF281A8DB30012BBEE /* TabViewModel.swift in Sources */,
+				B92389AC281A7FB40012BBEE /* CustomTabBar.swift in Sources */,
 				B9238981281A5FF80012BBEE /* ContentView.swift in Sources */,
 				B923897F281A5FF80012BBEE /* CaravanApp.swift in Sources */,
 			);
