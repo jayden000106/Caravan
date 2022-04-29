@@ -38,10 +38,10 @@ struct CustomTabBar: View {
             HomeView()
                 .tag("Home")
             
-            Text("Book Shelf")
+            BookShelfView()
                 .tag("Book Shelf")
             
-            Text("Profile")
+            ProfileView()
                 .tag("Profile")
             
         }
