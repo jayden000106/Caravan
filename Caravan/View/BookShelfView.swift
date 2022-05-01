@@ -9,58 +9,61 @@ import SwiftUI
 
 struct BookShelfView: View {
     var body: some View {
-        VStack(alignment: .leading) {
-            HStack {
-                Text("Book Shelf")
-                    .font(.title)
+        NavigationView {
+            VStack(alignment: .leading) {
+                
+                HStack {
+                    Text("Book Shelf")
+                        .font(.title)
+                        .bold()
+                        .navigationTitle("Book Shelf")
+                        .navigationBarHidden(true)
+                    
+                    Spacer()
+                    
+                    NavigationLink(destination: BookRegistView(), label: {
+                            Image(systemName: "plus")
+                                .foregroundColor(Color("BrandColor"))
+                                .font(.title2)
+                    })
+                }
+                
+                Text("Reading")
+                    .font(.title2)
                     .bold()
+                    .padding(.top, 30)
+                
+                ZStack(alignment: .leading) {
+                    RoundedRectangle(cornerRadius: 10)
+                        .fill(Color("BackgroundColor"))
+                        .frame(height: 200)
+                    
+                    RoundedRectangle(cornerRadius: 10)
+                        .fill(Color.white)
+                        .frame(width: 100, height: 160)
+                        .padding(.leading, 20)
+                }
+                
+                Text("Read")
+                    .font(.title2)
+                    .bold()
+                    .padding(.top, 20)
+                
+                ZStack(alignment: .leading) {
+                    RoundedRectangle(cornerRadius: 10)
+                        .fill(Color("BackgroundColor"))
+                        .frame(height: 200)
+                    
+                    Rectangle()
+                        .fill(Color.white)
+                        .frame(width: 40, height: 160)
+                        .padding(.leading, 20)
+                }
                 
                 Spacer()
-                
-                Button(action: {
-                    
-                }, label: {
-                    Image(systemName: "plus")
-                        .font(.title2)
-                        .foregroundColor(Color("BrandColor"))
-                })
             }
-            
-            Text("Reading")
-                .font(.title2)
-                .bold()
-                .padding(.top, 30)
-            
-            ZStack(alignment: .leading) {
-                RoundedRectangle(cornerRadius: 10)
-                    .fill(Color("BackgroundColor"))
-                    .frame(height: 200)
-                
-                RoundedRectangle(cornerRadius: 10)
-                    .fill(Color.white)
-                    .frame(width: 100, height: 160)
-                    .padding(.leading, 20)
-            }
-            
-            Text("Read")
-                .font(.title2)
-                .bold()
-                .padding(.top, 20)
-            
-            ZStack(alignment: .leading) {
-                RoundedRectangle(cornerRadius: 10)
-                    .fill(Color("BackgroundColor"))
-                    .frame(height: 200)
-                
-                Rectangle()
-                    .fill(Color.white)
-                    .frame(width: 40, height: 160)
-                    .padding(.leading, 20)
-            }
-            
-            Spacer()
+            .padding()
         }
-        .padding()
     }
 }
 
