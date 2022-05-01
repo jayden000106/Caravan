@@ -9,7 +9,42 @@ import SwiftUI
 
 struct ProfileView: View {
     var body: some View {
-        Text("ProfileView")
+        VStack(alignment: .leading) {
+            
+            HStack {
+                Circle()
+                    .fill(Color("BackgroundColor"))
+                    .frame(width: 120, height: 120)
+                
+                VStack(alignment: .leading) {
+                    Text("Jayden")
+                        .font(.title2)
+                        .bold()
+                        .padding(.bottom, 5)
+                    
+                    Text("One Sentence")
+                        .foregroundColor(.secondary)
+                }
+            }
+            
+            Text("Results")
+                .font(.title)
+                .bold()
+            
+            ZStack {
+                RoundedRectangle(cornerRadius: 10)
+                    .fill(Color("BackgroundColor"))
+                    .frame(height: 200)
+                
+                RoundedRectangle(cornerRadius: 10)
+                    .fill(Color.white)
+                    .frame(height: 160)
+                    .padding(20)
+            }
+            
+            Spacer()
+        }
+        .padding()
     }
 }
 
