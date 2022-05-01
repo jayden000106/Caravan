@@ -38,10 +38,12 @@ struct BookShelfView: View {
                         .fill(Color("BackgroundColor"))
                         .frame(height: 200)
                     
-                    RoundedRectangle(cornerRadius: 10)
-                        .fill(Color.white)
-                        .frame(width: 100, height: 160)
-                        .padding(.leading, 20)
+                    NavigationLink(destination: BookDetailView(), label: {
+                            RoundedRectangle(cornerRadius: 10)
+                                .fill(Color.white)
+                                .frame(width: 100, height: 160)
+                                .padding(.leading, 20)
+                    })
                 }
                 
                 Text("Read")

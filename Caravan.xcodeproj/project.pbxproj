@@ -21,6 +21,8 @@
 		B92389B5281BD3E20012BBEE /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92389B4281BD3E20012BBEE /* ProfileView.swift */; };
 		B92389B7281E99710012BBEE /* BookRegistView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92389B6281E99710012BBEE /* BookRegistView.swift */; };
 		B92389B9281EDDED0012BBEE /* ProfileEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92389B8281EDDED0012BBEE /* ProfileEditView.swift */; };
+		B92389BB281EF12B0012BBEE /* BookDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92389BA281EF12B0012BBEE /* BookDetailView.swift */; };
+		B92389BD281EF13D0012BBEE /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92389BC281EF13D0012BBEE /* TimerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +60,8 @@
 		B92389B4281BD3E20012BBEE /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		B92389B6281E99710012BBEE /* BookRegistView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookRegistView.swift; sourceTree = "<group>"; };
 		B92389B8281EDDED0012BBEE /* ProfileEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileEditView.swift; sourceTree = "<group>"; };
+		B92389BA281EF12B0012BBEE /* BookDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailView.swift; sourceTree = "<group>"; };
+		B92389BC281EF13D0012BBEE /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +156,8 @@
 				B92389B4281BD3E20012BBEE /* ProfileView.swift */,
 				B92389B6281E99710012BBEE /* BookRegistView.swift */,
 				B92389B8281EDDED0012BBEE /* ProfileEditView.swift */,
+				B92389BA281EF12B0012BBEE /* BookDetailView.swift */,
+				B92389BC281EF13D0012BBEE /* TimerView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -296,9 +302,11 @@
 			files = (
 				B92389B3281BD3D50012BBEE /* BookShelfView.swift in Sources */,
 				B92389B9281EDDED0012BBEE /* ProfileEditView.swift in Sources */,
+				B92389BB281EF12B0012BBEE /* BookDetailView.swift in Sources */,
 				B92389AF281A8DB30012BBEE /* TabViewModel.swift in Sources */,
 				B92389AC281A7FB40012BBEE /* CustomTabBar.swift in Sources */,
 				B92389B7281E99710012BBEE /* BookRegistView.swift in Sources */,
+				B92389BD281EF13D0012BBEE /* TimerView.swift in Sources */,
 				B9238981281A5FF80012BBEE /* ContentView.swift in Sources */,
 				B92389B1281AA0FE0012BBEE /* HomeView.swift in Sources */,
 				B92389B5281BD3E20012BBEE /* ProfileView.swift in Sources */,
