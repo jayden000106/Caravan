@@ -16,12 +16,6 @@ struct ProfileView: View {
         NavigationView {
             VStack(alignment: .leading) {
                 
-                NavigationLink(destination: ProfileEditView(), label: {
-                    Image(systemName: "gearshape")
-                        .foregroundColor(Color("BrandColor"))
-                        .font(.title2)
-                })
-                
                 HStack {
                     Circle()
                         .fill(Color("BackgroundColor"))
@@ -36,7 +30,9 @@ struct ProfileView: View {
                         
                         Text(sentence ?? "한 문장을 설정해주세요.")
                             .foregroundColor(.secondary)
+                            .padding(.top, 1)
                     }
+                    .padding(.leading, 10)
                 }
                 
                 Text("Results")
@@ -56,6 +52,19 @@ struct ProfileView: View {
                 }
                 
                 Spacer()
+                
+                NavigationLink(destination: ProfileEditView(), label: {
+                    ZStack {
+                        RoundedRectangle(cornerRadius: 10)
+                            .fill(Color("BrandColor"))
+                            .frame(height: 60)
+                        
+                        Text("프로필 수정하기")
+                            .foregroundColor(Color.black)
+                            .bold()
+                    }
+                })
+                .padding(.bottom, 70)
             }
             .padding()
         }
