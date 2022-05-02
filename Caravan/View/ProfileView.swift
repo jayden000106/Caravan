@@ -8,6 +8,10 @@
 import SwiftUI
 
 struct ProfileView: View {
+    
+    let name = UserDefaults.standard.string(forKey: "name")
+    let sentence = UserDefaults.standard.string(forKey: "sentence")
+    
     var body: some View {
         NavigationView {
             VStack(alignment: .leading) {
@@ -26,11 +30,11 @@ struct ProfileView: View {
                         .navigationBarHidden(true)
                     
                     VStack(alignment: .leading) {
-                        Text("Jayden")
+                        Text(name ?? "프로필을 설정해주세요.")
                             .font(.title2)
                             .bold()
                         
-                        Text("One Sentence")
+                        Text(sentence ?? "한 문장을 설정해주세요.")
                             .foregroundColor(.secondary)
                     }
                 }
