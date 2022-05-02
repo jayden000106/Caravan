@@ -38,15 +38,15 @@ struct BookShelfView: View {
                         .fill(Color("BackgroundColor"))
                         .frame(height: 200)
                     
-                    NavigationLink(destination: BookDetailView(), label: {
-                        ScrollView(.horizontal, showsIndicators: false) {
-                            HStack {
-                                ForEach(books) { book in
+                    ScrollView(.horizontal, showsIndicators: false) {
+                        HStack {
+                            ForEach(books) { book in
+                                NavigationLink(destination: BookDetailView(book: book), label: {
                                     BookImageView(book: book)
-                                }
+                                })
                             }
                         }
-                    })
+                    }
                     .padding(.leading, 20)
                 }
                 
@@ -60,10 +60,16 @@ struct BookShelfView: View {
                         .fill(Color("BackgroundColor"))
                         .frame(height: 200)
                     
-                    Rectangle()
-                        .fill(Color.white)
-                        .frame(width: 40, height: 160)
-                        .padding(.leading, 20)
+                    ScrollView(.horizontal, showsIndicators: false) {
+                        HStack {
+                            ForEach(books) { book in
+                                NavigationLink(destination: BookDetailView(book: book), label: {
+                                    BookReadImageView(book: book)
+                                })
+                            }
+                        }
+                    }
+                    .padding(.leading, 20)
                 }
                 
                 Spacer()
@@ -82,11 +88,18 @@ struct BookShelfView_Previews: PreviewProvider {
 
 struct Book: Identifiable {
     let id = UUID()
+    let bookTitle: String
+    let bookWirter: String
+    let bookSummary: String
+    let bookDetail: String
     let bookImage: String
 }
 
 let books = [
-    Book(bookImage: "Book1"), Book(bookImage: "Book2"), Book(bookImage: "Book3"), Book(bookImage: "Book4")
+    Book(bookTitle: "별들이 겹치는 순간", bookWirter: "이민진 지음 | 이미정 옮김 | 2018", bookSummary: "어디에도 속하지 못했던 자이니치들의 분노와 슬픔에서 탄생한 대작", bookDetail: "한국계 1.5세인 미국 작가 이민진의 장편소설 『파친코』 제1권. 내국인이면서 끝내 이방인일 수밖에 없었던 자이니치(재일동포)들의 처절한 생애를 깊이 있는 필체로 담아낸 작품이다.", bookImage: "Book1"),
+    Book(bookTitle: "나답게 사는 방법", bookWirter: "이민정 지음 | 이미진 옮김 | 2022", bookSummary: "Summary2", bookDetail: "상승 욕구가 강한 재미동포들과 달리 많은 자이니치들이 일본의 사회적, 경제적 사다리 아래쪽에서 신음하고 있다는 사실을 알게 된 저자는", bookImage: "Book2"),
+    Book(bookTitle: "토스트", bookWirter: "서민정 지음 | 서미진 옮김 | 2012", bookSummary: "Summary3", bookDetail: "저자가 자이니치, 즉 재일동포의 존재를 처음 접한 것은 대학생이었던 1989년, 일본에서 자이니치들을 만났던 개신교 선교사의 강연을 들은 때였다.", bookImage: "Book3"),
+    Book(bookTitle: "곰의 행복", bookWirter: "김민정 지음 | 김미진 옮김 | 2014", bookSummary: "Summary4", bookDetail: "그때부터 자이니치에 관해 관심을 가지게 되었고 이번 작품에서 일제강점기부터 1980년대까지를 시대적 배경으로 하여 4대에 걸친 핏줄의 역사를 탄생시켰다.", bookImage: "Book4")
 ]
 
 struct BookImageView: View {
@@ -98,5 +111,17 @@ struct BookImageView: View {
             .resizable()
             .frame(width: 100, height: 160)
             .cornerRadius(10)
+    }
+}
+
+struct BookReadImageView: View {
+    let book: Book
+    
+    var body: some View {
+        Image(book.bookImage)
+            .resizable()
+            .scaledToFill()
+            .frame(width: 40, height: 160)
+            .clipped()
     }
 }

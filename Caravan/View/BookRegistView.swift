@@ -16,6 +16,8 @@ struct BookRegistView: View {
         ZStack {
             Color("BackgroundColor")
                 .ignoresSafeArea()
+                .navigationTitle("책 등록하기")
+                .navigationBarTitleDisplayMode(.inline)
             
             VStack(alignment: .leading) {
                 Text("책 제목을 입력해주세요.")
@@ -52,6 +54,19 @@ struct BookRegistView: View {
                     .frame(height: 200)
                 
                 Spacer()
+                
+                Button(action: {}, label: {
+                    ZStack {
+                        RoundedRectangle(cornerRadius: 10)
+                            .fill(Color("BrandColor"))
+                            .frame(height: 60)
+                        
+                        Text("등록하기")
+                            .foregroundColor(Color.black)
+                            .bold()
+                    }
+                })
+                .padding(.bottom, 70)
             }
             .padding()
         }
