@@ -39,11 +39,15 @@ struct BookShelfView: View {
                         .frame(height: 200)
                     
                     NavigationLink(destination: BookDetailView(), label: {
-                            RoundedRectangle(cornerRadius: 10)
-                                .fill(Color.white)
-                                .frame(width: 100, height: 160)
-                                .padding(.leading, 20)
+                        ScrollView(.horizontal, showsIndicators: false) {
+                            HStack {
+                                ForEach(books) { book in
+                                    BookImageView(book: book)
+                                }
+                            }
+                        }
                     })
+                    .padding(.leading, 20)
                 }
                 
                 Text("Read")
@@ -73,5 +77,26 @@ struct BookShelfView_Previews: PreviewProvider {
     static var previews: some View {
         BookShelfView()
             .previewDevice("iPhone 13 Pro")
+    }
+}
+
+struct Book: Identifiable {
+    let id = UUID()
+    let bookImage: String
+}
+
+let books = [
+    Book(bookImage: "Book1"), Book(bookImage: "Book2"), Book(bookImage: "Book3"), Book(bookImage: "Book4")
+]
+
+struct BookImageView: View {
+    
+    let book: Book
+    
+    var body: some View {
+        Image(book.bookImage)
+            .resizable()
+            .frame(width: 100, height: 160)
+            .cornerRadius(10)
     }
 }
