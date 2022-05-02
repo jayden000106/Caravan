@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct ProfileEditView: View {
+    @State var name: String = ""
+    @State var santence: String = ""
+    
     var body: some View {
         ZStack {
             Color("BackgroundColor")
@@ -17,17 +20,27 @@ struct ProfileEditView: View {
                 Text("이름을 입력해주세요.")
                     .font(.title3)
                 
-                RoundedRectangle(cornerRadius: 10)
-                    .fill(Color.white)
-                    .frame(height: 60)
+                ZStack {
+                    RoundedRectangle(cornerRadius: 10)
+                        .fill(Color.white)
+                        .frame(height: 60)
+                    
+                    TextField("입력해주세요", text: $name)
+                        .padding()
+                }
                 
                 Text("한 문장을 입력해주세요.")
                     .font(.title3)
                     .padding(.top, 40)
                 
-                RoundedRectangle(cornerRadius: 10)
-                    .fill(Color.white)
-                    .frame(height: 60)
+                ZStack {
+                    RoundedRectangle(cornerRadius: 10)
+                        .fill(Color.white)
+                        .frame(height: 60)
+                    
+                    TextField("입력해주세요", text: $santence)
+                        .padding()
+                }
                 
                 Spacer()
             }

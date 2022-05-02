@@ -8,7 +8,11 @@
 import SwiftUI
 
 struct BookRegistView: View {
+    @State var bookName: String = ""
+    @State var bookLink: String = ""
+    
     var body: some View {
+        
         ZStack {
             Color("BackgroundColor")
                 .ignoresSafeArea()
@@ -17,17 +21,27 @@ struct BookRegistView: View {
                 Text("책 제목을 입력해주세요.")
                     .font(.title3)
                 
-                RoundedRectangle(cornerRadius: 10)
-                    .fill(Color.white)
-                    .frame(height: 60)
+                ZStack {
+                    RoundedRectangle(cornerRadius: 10)
+                        .fill(Color.white)
+                        .frame(height: 60)
+                    
+                    TextField("입력해주세요", text: $bookName)
+                        .padding()
+                }
                 
                 Text("링크(교보문고)를 입력해주세요.")
                     .font(.title3)
                     .padding(.top, 40)
                 
-                RoundedRectangle(cornerRadius: 10)
-                    .fill(Color.white)
-                    .frame(height: 60)
+                ZStack {
+                    RoundedRectangle(cornerRadius: 10)
+                        .fill(Color.white)
+                        .frame(height: 60)
+                    
+                    TextField("입력해주세요", text: $bookLink)
+                        .padding()
+                }
                 
                 Text("책 표지 사진을 첨부해주세요.")
                     .font(.title3)
