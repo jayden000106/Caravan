@@ -112,7 +112,7 @@
 		B923897D281A5FF80012BBEE /* Caravan */ = {
 			isa = PBXGroup;
 			children = (
-				B92389AD281A8D960012BBEE /* ViewModel */,
+				B92389AD281A8D960012BBEE /* Model */,
 				B92389A8281A7F2D0012BBEE /* View */,
 				B923897E281A5FF80012BBEE /* CaravanApp.swift */,
 				B9238980281A5FF80012BBEE /* ContentView.swift */,
@@ -162,12 +162,12 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		B92389AD281A8D960012BBEE /* ViewModel */ = {
+		B92389AD281A8D960012BBEE /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				B92389AE281A8DB30012BBEE /* TabViewModel.swift */,
 			);
-			path = ViewModel;
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

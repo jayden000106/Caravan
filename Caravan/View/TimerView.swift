@@ -17,23 +17,29 @@ struct TimerView: View {
         ZStack {
             Color("BackgroundColor")
                 .ignoresSafeArea()
+                .navigationTitle("스톱워치")
+                .navigationBarTitleDisplayMode(.inline)
             
             VStack {
                 Text("별들이 겹치는 순간")
                     .font(.title2)
                 
-                Text(String(format: "%02d:%02d", managerClass.secondElapsed / 60, managerClass.secondElapsed % 60))
+                Text(String(format: "%02.0f:%02.0f", managerClass.secondElapsed / 60.0, managerClass.secondElapsed.truncatingRemainder(dividingBy: 60.0)))
                     .foregroundColor(.secondary)
                     .padding(.top, 10)
+                    .padding(.bottom, 10)
                 
                 ZStack {
                     Circle()
+                        .stroke(lineWidth: 40)
                         .frame(width: 300, height: 300)
                         .foregroundColor(Color.white)
                     
                     Circle()
-                        .frame(width: 240, height: 240)
-                        .foregroundColor(Color("BackgroundColor"))
+                        .trim(from: 0.0, to: min(managerClass.secondElapsed / 1000.0, 1.0))
+                        .stroke(AngularGradient(gradient: Gradient(colors: [Color("BrandColor"), Color("SecondBrandColor"), Color("BrandColor")]), center: .center), style: StrokeStyle(lineWidth: 40, lineCap: .round, lineJoin: .round))
+                        .frame(width: 300, height: 300)
+                        .rotationEffect((Angle(degrees: 270)))
                     
                     Button(action: {
                         self.isPlaying.toggle()
@@ -52,7 +58,7 @@ struct TimerView: View {
                             .foregroundColor(Color("BrandColor"))
                     })
                 }
-                .padding(.top, 10)
+                .padding()
                 
                 Spacer()
                 
@@ -67,6 +73,7 @@ struct TimerView: View {
                             .bold()
                     }
                 })
+                .padding(.bottom, 70)
             }
             .padding()
         }
@@ -86,7 +93,7 @@ enum mode {
 }
 
 class StopWatchManagerClass: ObservableObject {
-    @Published var secondElapsed = 0
+    @Published var secondElapsed = 0.0
     @Published var mode:mode = .stopped
     var timer = Timer()
     
