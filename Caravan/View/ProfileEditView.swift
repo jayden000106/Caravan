@@ -11,6 +11,8 @@ struct ProfileEditView: View {
     @State var name: String = ""
     @State var sentence: String = ""
     
+    @Environment(\.presentationMode) var presentationMode
+    
     var body: some View {
         ZStack {
             Color("BackgroundColor")
@@ -50,6 +52,7 @@ struct ProfileEditView: View {
                     
                     UserDefaults.standard.set(name, forKey: "name")
                     UserDefaults.standard.set(sentence, forKey: "sentence")
+                    presentationMode.wrappedValue.dismiss()
                     
                 }, label: {
                     ZStack {

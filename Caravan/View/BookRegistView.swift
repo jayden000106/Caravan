@@ -11,6 +11,8 @@ struct BookRegistView: View {
     @State var bookName: String = ""
     @State var bookLink: String = ""
     
+    @Environment(\.presentationMode) var presentationMode
+    
     var body: some View {
         
         ZStack {
@@ -55,7 +57,9 @@ struct BookRegistView: View {
                 
                 Spacer()
                 
-                Button(action: {}, label: {
+                Button(action: {
+                    presentationMode.wrappedValue.dismiss()
+                }, label: {
                     ZStack {
                         RoundedRectangle(cornerRadius: 10)
                             .fill(Color("BrandColor"))

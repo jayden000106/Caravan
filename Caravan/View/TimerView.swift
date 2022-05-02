@@ -27,18 +27,17 @@ struct TimerView: View {
                 Text(String(format: "%02.0f:%02.0f", managerClass.secondElapsed / 60.0, managerClass.secondElapsed.truncatingRemainder(dividingBy: 60.0)))
                     .foregroundColor(.secondary)
                     .padding(.top, 10)
-                    .padding(.bottom, 10)
                 
                 ZStack {
                     Circle()
                         .stroke(lineWidth: 40)
-                        .frame(width: 300, height: 300)
+                        .frame(width: 280, height: 280)
                         .foregroundColor(Color.white)
                     
                     Circle()
                         .trim(from: 0.0, to: min(managerClass.secondElapsed / 1000.0, 1.0))
                         .stroke(AngularGradient(gradient: Gradient(colors: [Color("BrandColor"), Color("SecondBrandColor"), Color("BrandColor")]), center: .center), style: StrokeStyle(lineWidth: 40, lineCap: .round, lineJoin: .round))
-                        .frame(width: 300, height: 300)
+                        .frame(width: 280, height: 280)
                         .rotationEffect((Angle(degrees: 270)))
                     
                     Button(action: {

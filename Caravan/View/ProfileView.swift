@@ -45,10 +45,22 @@ struct ProfileView: View {
                         .fill(Color("BackgroundColor"))
                         .frame(height: 200)
                     
-                    RoundedRectangle(cornerRadius: 10)
-                        .fill(Color.white)
+                    ZStack(alignment: .leading) {
+                        RoundedRectangle(cornerRadius: 10)
+                            .fill(Color.white)
+                            .frame(height: 160)
+                        
+                        VStack {
+                            RoundedRectangle(cornerRadius: 10)
+                                .fill(Color("SecondBrandColor"))
+                                .frame(width: 40, height: 40, alignment: .leading)
+                                .padding(20)
+                            
+                            Spacer()
+                        }
                         .frame(height: 160)
-                        .padding(20)
+                    }
+                    .padding(20)
                 }
                 
                 Spacer()
