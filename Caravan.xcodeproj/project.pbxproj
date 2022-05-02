@@ -23,6 +23,7 @@
 		B92389B9281EDDED0012BBEE /* ProfileEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92389B8281EDDED0012BBEE /* ProfileEditView.swift */; };
 		B92389BB281EF12B0012BBEE /* BookDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92389BA281EF12B0012BBEE /* BookDetailView.swift */; };
 		B92389BD281EF13D0012BBEE /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92389BC281EF13D0012BBEE /* TimerView.swift */; };
+		B92389C1282053F30012BBEE /* LocalNotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92389C0282053F30012BBEE /* LocalNotificationManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		B92389BA281EF12B0012BBEE /* BookDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailView.swift; sourceTree = "<group>"; };
 		B92389BC281EF13D0012BBEE /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
 		B92389BE28204C260012BBEE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		B92389C0282053F30012BBEE /* LocalNotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNotificationManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +115,7 @@
 		B923897D281A5FF80012BBEE /* Caravan */ = {
 			isa = PBXGroup;
 			children = (
+				B92389BF282053D90012BBEE /* Manager */,
 				B92389BE28204C260012BBEE /* Info.plist */,
 				B92389AD281A8D960012BBEE /* Model */,
 				B92389A8281A7F2D0012BBEE /* View */,
@@ -170,6 +173,14 @@
 				B92389AE281A8DB30012BBEE /* TabViewModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		B92389BF282053D90012BBEE /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				B92389C0282053F30012BBEE /* LocalNotificationManager.swift */,
+			);
+			path = Manager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -308,6 +319,7 @@
 				B92389AF281A8DB30012BBEE /* TabViewModel.swift in Sources */,
 				B92389AC281A7FB40012BBEE /* CustomTabBar.swift in Sources */,
 				B92389B7281E99710012BBEE /* BookRegistView.swift in Sources */,
+				B92389C1282053F30012BBEE /* LocalNotificationManager.swift in Sources */,
 				B92389BD281EF13D0012BBEE /* TimerView.swift in Sources */,
 				B9238981281A5FF80012BBEE /* ContentView.swift in Sources */,
 				B92389B1281AA0FE0012BBEE /* HomeView.swift in Sources */,

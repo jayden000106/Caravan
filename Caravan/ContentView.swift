@@ -8,8 +8,23 @@
 import SwiftUI
 
 struct ContentView: View {
+    func setNotification() -> Void {
+        let manager = LocalNotificationManager()
+        manager.requestPermission()
+        manager.addNotification(title: "하루에 한 번 잠깐 책을 읽을 시간이에요")
+        manager.schedule()
+        // manager.scheduleNotifications()
+    }
+    
     var body: some View {
-        CustomTabBar()
+        VStack {
+            Button(action: {
+                self.setNotification()
+            }, label: {
+                Text("Set Notification")
+            })
+            CustomTabBar()
+        }
     }
 }
 
