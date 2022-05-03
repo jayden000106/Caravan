@@ -20,9 +20,10 @@ struct ProfileEditView: View {
                 .navigationTitle("프로필 수정")
                 .navigationBarTitleDisplayMode(.inline)
             
-            VStack(alignment: .leading) {
+            VStack(alignment: .leading, spacing: 0) {
                 Text("이름을 입력해주세요.")
                     .font(.title3)
+                    .padding(.top, 20)
                 
                 ZStack {
                     RoundedRectangle(cornerRadius: 10)
@@ -30,8 +31,9 @@ struct ProfileEditView: View {
                         .frame(height: 60)
                     
                     TextField("입력해주세요", text: $name)
-                        .padding()
+                        .padding(20)
                 }
+                .padding(.top, 10)
                 
                 Text("한 문장을 입력해주세요.")
                     .font(.title3)
@@ -43,8 +45,9 @@ struct ProfileEditView: View {
                         .frame(height: 60)
                     
                     TextField("입력해주세요", text: $sentence)
-                        .padding()
+                        .padding(20)
                 }
+                .padding(.top, 10)
                 
                 Spacer()
                 
@@ -67,7 +70,7 @@ struct ProfileEditView: View {
                 })
                 .padding(.bottom, 70)
             }
-            .padding()
+            .padding(.horizontal)
         }
     }
 }

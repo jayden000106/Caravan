@@ -21,9 +21,10 @@ struct BookRegistView: View {
                 .navigationTitle("책 등록하기")
                 .navigationBarTitleDisplayMode(.inline)
             
-            VStack(alignment: .leading) {
+            VStack(alignment: .leading, spacing: 0) {
                 Text("책 제목을 입력해주세요.")
                     .font(.title3)
+                    .padding(.top, 20)
                 
                 ZStack {
                     RoundedRectangle(cornerRadius: 10)
@@ -31,8 +32,9 @@ struct BookRegistView: View {
                         .frame(height: 60)
                     
                     TextField("입력해주세요", text: $bookName)
-                        .padding()
+                        .padding(20)
                 }
+                .padding(.top, 10)
                 
                 Text("링크(교보문고)를 입력해주세요.")
                     .font(.title3)
@@ -44,8 +46,9 @@ struct BookRegistView: View {
                         .frame(height: 60)
                     
                     TextField("입력해주세요", text: $bookLink)
-                        .padding()
+                        .padding(20)
                 }
+                .padding(.top, 10)
                 
                 Text("책 표지 사진을 첨부해주세요.")
                     .font(.title3)
@@ -54,6 +57,7 @@ struct BookRegistView: View {
                 RoundedRectangle(cornerRadius: 10)
                     .fill(Color.white)
                     .frame(height: 200)
+                    .padding(.top, 10)
                 
                 Spacer()
                 
@@ -72,7 +76,7 @@ struct BookRegistView: View {
                 })
                 .padding(.bottom, 70)
             }
-            .padding()
+            .padding(.horizontal)
         }
     }
 }

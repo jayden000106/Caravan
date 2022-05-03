@@ -20,9 +20,10 @@ struct TimerView: View {
                 .navigationTitle("스톱워치")
                 .navigationBarTitleDisplayMode(.inline)
             
-            VStack {
+            VStack(spacing: 0) {
                 Text("별들이 겹치는 순간")
                     .font(.title2)
+                    .padding(.top, 20)
                 
                 Text(String(format: "%02.0f:%02.0f", managerClass.secondElapsed / 60.0, managerClass.secondElapsed.truncatingRemainder(dividingBy: 60.0)))
                     .foregroundColor(.secondary)
@@ -35,7 +36,7 @@ struct TimerView: View {
                         .foregroundColor(Color.white)
                     
                     Circle()
-                        .trim(from: 0.0, to: min(managerClass.secondElapsed / 1000.0, 1.0))
+                        .trim(from: 0.0, to: min(managerClass.secondElapsed / 100.0, 1.0))
                         .stroke(AngularGradient(gradient: Gradient(colors: [Color("BrandColor"), Color("SecondBrandColor"), Color("BrandColor")]), center: .center), style: StrokeStyle(lineWidth: 40, lineCap: .round, lineJoin: .round))
                         .frame(width: 280, height: 280)
                         .rotationEffect((Angle(degrees: 270)))
@@ -57,7 +58,8 @@ struct TimerView: View {
                             .foregroundColor(Color("BrandColor"))
                     })
                 }
-                .padding()
+                .padding(20)
+                .padding(.top, 10)
                 
                 Spacer()
                 
@@ -74,7 +76,7 @@ struct TimerView: View {
                 })
                 .padding(.bottom, 70)
             }
-            .padding()
+            .padding(.horizontal)
         }
     }
 }
@@ -92,7 +94,7 @@ enum mode {
 }
 
 class StopWatchManagerClass: ObservableObject {
-    @Published var secondElapsed = 0.0
+    @Published var secondElapsed = 0.01
     @Published var mode:mode = .stopped
     var timer = Timer()
     

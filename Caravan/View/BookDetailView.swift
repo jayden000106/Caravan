@@ -21,19 +21,20 @@ struct BookDetailView: View {
 
             ScrollView {
                 
-                VStack {
+                VStack(spacing: 0) {
                     
                     Image(book.bookImage)
                         .resizable()
                         .scaledToFill()
-                        .frame(height: 300)
+                        .frame(height: 400)
                         .clipped()
                     
-                    VStack(alignment: .leading) {
+                    VStack(alignment: .leading, spacing: 0) {
                         
                         Text(book.bookTitle)
                             .font(.title)
                             .bold()
+                            .padding(.top, 40)
                         
                         Text(book.bookWirter)
                             .foregroundColor(.secondary)
@@ -41,11 +42,11 @@ struct BookDetailView: View {
                         
                         Text(book.bookSummary)
                             .bold()
-                            .padding(.top, 10)
+                            .padding(.top, 20)
                         
                         Text(book.bookDetail)
                             .foregroundColor(.secondary)
-                            .padding(.top, 10)
+                            .padding(.top, 20)
                         
                         Spacer()
                         
@@ -63,9 +64,10 @@ struct BookDetailView: View {
                         .padding(.top, 20)
                         .padding(.bottom, 70)
                     }
-                    .padding()
+                    .padding(.horizontal)
                 }
             }
+            .ignoresSafeArea(.all)
         }
     }
 }

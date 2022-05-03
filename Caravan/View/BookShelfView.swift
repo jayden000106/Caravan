@@ -10,8 +10,7 @@ import SwiftUI
 struct BookShelfView: View {
     var body: some View {
         NavigationView {
-            VStack(alignment: .leading) {
-                
+            VStack(alignment: .leading, spacing: 0) {
                 HStack {
                     Text("Book Shelf")
                         .font(.title)
@@ -27,11 +26,12 @@ struct BookShelfView: View {
                                 .font(.title2)
                     })
                 }
+                .padding(.top, 10)
                 
                 Text("Reading")
                     .font(.title2)
                     .bold()
-                    .padding(.top, 30)
+                    .padding(.top, 40)
                 
                 ZStack(alignment: .leading) {
                     RoundedRectangle(cornerRadius: 10)
@@ -49,6 +49,7 @@ struct BookShelfView: View {
                     }
                     .padding(.leading, 20)
                 }
+                .padding(.top, 10)
                 
                 Text("Read")
                     .font(.title2)
@@ -71,10 +72,11 @@ struct BookShelfView: View {
                     }
                     .padding(.leading, 20)
                 }
+                .padding(.top, 10)
                 
                 Spacer()
             }
-            .padding()
+            .padding(.horizontal)
         }
     }
 }

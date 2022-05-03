@@ -10,11 +10,11 @@ import SwiftUI
 struct HomeView: View {
     var body: some View {
         NavigationView {
-            VStack(alignment: .leading) {
-                
+            VStack(alignment: .leading, spacing: 0) {
                 Text("Timer")
                     .font(.title)
                     .bold()
+                    .padding(.top, 20)
                     .navigationTitle("Home")
                     .navigationBarHidden(true)
                 
@@ -24,10 +24,6 @@ struct HomeView: View {
                         .frame(height: 356)
                     
                     VStack {
-                        Text("별들이 겹치는 순간")
-                            .font(.title2)
-                            .padding(.bottom, 30)
-                        
                         ZStack {
                             Circle()
                                 .frame(width: 200, height: 200)
@@ -44,17 +40,14 @@ struct HomeView: View {
                                         .foregroundColor(Color("BrandColor"))
                             })
                         }
-                        
-                        Text("00:00")
-                            .foregroundColor(.secondary)
-                            .padding(.top, 30)
                     }
                 }
+                .padding(.top, 10)
                 
                 Text("Memo")
                     .font(.title)
                     .bold()
-                    .padding(.top, 30)
+                    .padding(.top, 40)
                 
                 ZStack(alignment: .leading) {
                     RoundedRectangle(cornerRadius: 10)
@@ -71,12 +64,13 @@ struct HomeView: View {
                         }
                         
                     }
-                    .padding()
+                    .padding(.leading, 20)
                 }
+                .padding(.top, 10)
                 
                 Spacer()
             }
-            .padding()
+            .padding(.horizontal)
         }
     }
 }
